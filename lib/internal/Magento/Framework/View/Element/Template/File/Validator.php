@@ -139,7 +139,9 @@ class Validator
         foreach ($directories as $directory) {
             if (0 === strpos($realPath, $directory)) {
                 return true;
-            }
+            } else if (0 === strpos($path, $directory)) {
+				return true;
+			}
         }
         return false;
     }
